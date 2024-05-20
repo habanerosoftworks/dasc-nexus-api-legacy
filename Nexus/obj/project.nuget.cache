@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "sK5hyAaCXpKZ79d/yLqoGf2yHOGT1SMU7M/snJjUR3qr/DjmoF/6ojc4HHC+EKcHyUjasmXfKs1Kln0HWh5STg==",
+  "success": true,
+  "projectFilePath": "/Users/retbleed/Projects/dasc-nexus-api/Nexus/Nexus.csproj",
+  "expectedPackageFiles": [
+    "/Users/retbleed/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/retbleed/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/retbleed/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/retbleed/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/retbleed/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/retbleed/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
