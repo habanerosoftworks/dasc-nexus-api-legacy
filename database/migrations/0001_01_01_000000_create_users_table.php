@@ -13,12 +13,17 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('activated');
+            $table->integer('id_type');
             $table->rememberToken();
             $table->timestamps();
+
+            // This to handle the synchronization of the external database
+            $table->integer('original_id');
+            $table->boolean('was_deleted')->default(false);
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
