@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('turn_id');
             $table->integer('semester_id');
-            $table->integer('major_id');
+            $table->unsignedInteger('major_id');
             $table->timestamps();
 
             // This to handle the synchronization of the external database

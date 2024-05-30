@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('sessions_dasc', function (Blueprint $table) {
             $table->id();
             $table->string('description', 50);
             $table->timestamps();

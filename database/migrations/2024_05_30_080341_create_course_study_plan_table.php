@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('study_plans', function (Blueprint $table) {
+        Schema::create('course_study_plan', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('major_id');
-            $table->integer('start');
-            $table->integer('end');
+            $table->unsignedInteger('course_id');
+            $table->unsignedInteger('study_plan_id');
             $table->timestamps();
-
-            // This to handle the synchronization of the external database
-            $table->integer('original_id');
-            $table->boolean('was_deleted')->default(false);
         });
     }
 
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('study_plans');
+        Schema::dropIfExists('course_study_plan');
     }
 };

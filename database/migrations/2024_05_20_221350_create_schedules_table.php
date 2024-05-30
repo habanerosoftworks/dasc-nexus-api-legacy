@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->integer('teacher_id');
-            $table->integer('course_id');
-            $table->integer('group_id');
-            $table->integer('study_plan_id');
-            $table->integer('academic_period_id');
-            $table->integer('session_id');
-            $table->integer('classroom_id');
-            $table->integer('day_id');
-            $table->integer('block_id');
+            $table->unsignedInteger('teacher_id');
+            $table->unsignedInteger('course_id');
+            $table->unsignedInteger('group_id');
+            $table->unsignedInteger('study_plan_id');
+            $table->unsignedInteger('academic_period_id');
+            $table->unsignedInteger('session_dasc_id');
+            $table->unsignedInteger('classroom_id');
+            $table->unsignedInteger('day_id');
+            $table->unsignedInteger('block_id');
             $table->timestamps();
 
             // This to handle the synchronization of the external database

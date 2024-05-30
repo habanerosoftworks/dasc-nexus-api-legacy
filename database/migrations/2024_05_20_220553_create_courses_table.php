@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->integer('major_id');
-            $table->integer('semester_id');
-            $table->integer('area_id');
+            $table->unsignedInteger('major_id');
+            $table->unsignedInteger('semester_id');
+            $table->unsignedInteger('area_id');
             $table->string('code', 6);
             $table->integer('teoric_hours');
             $table->integer('practice_hours');
             $table->integer('credits');
             $table->string('character', 20);
-            $table->integer('study_plan_id');
+            $table->unsignedInteger('study_plan_id');
             $table->string('name', 150);
             $table->integer('total_hours');
             $table->timestamps();

@@ -13,18 +13,18 @@ return new class extends Migration
     {
         Schema::create('teacher_attendances', function (Blueprint $table) {
             $table->id();
-            $table->integer('session_id');
-            $table->integer('comment_id');
-            $table->integer('planning_id');
-            $table->integer('teacher_id');
-            $table->integer('study_plan_id');
-            $table->integer('group_id');
-            $table->integer('academic_period_id');
+            $table->unsignedInteger('session_dasc_id');
+            $table->unsignedInteger('comment_id');
+            $table->unsignedInteger('planning_id');
+            $table->unsignedInteger('teacher_id');
+            $table->unsignedInteger('study_plan_id');
+            $table->unsignedInteger('group_id');
+            $table->unsignedInteger('academic_period_id');
             $table->date('date');
             $table->time('entry_time');
             $table->time('departure_time');
             $table->string('planned_activity', 255);
-            $table->integer('advance_id');
+            $table->unsignedInteger('advance_id');
             $table->timestamps();
 
             // This to handle the synchronization of the external database

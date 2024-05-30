@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('charges', function (Blueprint $table) {
             $table->id();
-            $table->integer('group_id');
-            $table->integer('course_id');
-            $table->integer('teacher_id');
-            $table->integer('study_plan_id');
-            $table->integer('academic_period_id');
+            $table->unsignedInteger('group_id');
+            $table->unsignedInteger('course_id');
+            $table->unsignedInteger('teacher_id');
+            $table->unsignedInteger('study_plan_id');
+            $table->unsignedInteger('academic_period_id');
             $table->timestamps();
 
             // This to handle the synchronization of the external database
