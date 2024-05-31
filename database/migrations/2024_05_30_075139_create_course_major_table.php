@@ -16,6 +16,10 @@ return new class extends Migration
             $table->unsignedInteger('course_id');
             $table->unsignedInteger('major_id');
             $table->timestamps();
+
+            // This to handle the synchronization of the external database
+            $table->integer('original_id')->nullable();
+            $table->boolean('was_deleted')->default(false);
         });
     }
 

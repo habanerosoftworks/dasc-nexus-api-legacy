@@ -20,10 +20,11 @@ return new class extends Migration
             $table->string('email', 50)->unique();
             $table->string('phone', 10);
             $table->string('address', 128);
+            $table->unsignedInteger('user_id');
             $table->timestamps();
 
             // This to handle the synchronization of the external database
-            $table->integer('original_id');
+            $table->integer('original_id')->nullable();
             $table->boolean('was_deleted')->default(false);
         });
     }

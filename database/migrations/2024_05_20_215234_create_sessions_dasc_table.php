@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
 
             // This to handle the synchronization of the external database
-            $table->integer('original_id');
+            $table->integer('original_id')->nullable();
             $table->boolean('was_deleted')->default(false);
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists('sessions_dasc');
     }
 };

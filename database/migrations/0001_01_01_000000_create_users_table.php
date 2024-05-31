@@ -16,13 +16,13 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('activated');
-            $table->integer('id_type');
+            $table->boolean('activated')->default(false);
+            $table->integer('id_type')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
             // This to handle the synchronization of the external database
-            $table->integer('original_id');
+            $table->integer('original_id')->nullable();
             $table->boolean('was_deleted')->default(false);
         });
 
