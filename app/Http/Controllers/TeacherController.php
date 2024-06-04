@@ -31,18 +31,12 @@ class TeacherController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id): JsonResponse
     {
         $teacher = Teacher::findOrFail($id);
         return response()->json($teacher, 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(TeacherRequest $request, string $id): JsonResponse
     {
         $teacher = Teacher::findOrFail($id);
@@ -50,9 +44,6 @@ class TeacherController extends Controller
         return response()->json($teacher, 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id): JsonResponse
     {
         $teacher = Teacher::findOrFail($id);
