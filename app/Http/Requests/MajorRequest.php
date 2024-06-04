@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class ClassroomRequest extends FormRequest
+class MajorRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,7 @@ class ClassroomRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'description' => 'required|string|max:100',
-            'location' => 'required|string|max:100',
-            'capacity' => 'required|integer',
-            'building_id' => 'required|integer',
-            'order_id' => 'required|string|max:1',
+            'name' => 'required|string|max:100',
         ];
     }
 
