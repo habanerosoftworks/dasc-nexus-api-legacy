@@ -4,6 +4,7 @@ use App\Http\Controllers\AcademicPeriodController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\MajorController;
+use App\Http\Controllers\SessionDascController;
 use App\Http\Controllers\StudyPlanController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Http\Request;
@@ -23,4 +24,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('majors', MajorController::class);
     Route::apiResource('study-plans', StudyPlanController::class);
     Route::apiResource('academic-periods', AcademicPeriodController::class);
+    Route::apiResource('sessions-dasc', SessionDascController::class);
 });
