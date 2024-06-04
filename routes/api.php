@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AcademicPeriodController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\MajorController;
@@ -21,4 +22,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('teachers', TeacherController::class);
     Route::apiResource('majors', MajorController::class);
     Route::apiResource('study-plans', StudyPlanController::class);
+    Route::apiResource('academic-periods', AcademicPeriodController::class);
 });
