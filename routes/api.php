@@ -4,6 +4,7 @@ use App\Http\Controllers\AcademicPeriodController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\DayController;
+use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\SessionDascController;
 use App\Http\Controllers\StudyPlanController;
@@ -27,4 +28,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('academic-periods', AcademicPeriodController::class);
     Route::apiResource('sessions-dasc', SessionDascController::class);
     Route::apiResource('days', DayController::class);
+    Route::apiResource('groups', GroupController::class);
 });
