@@ -11,13 +11,13 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'username' => 'AdminAlmanza',
+            'name' => 'AdminAlmanza',
             'email' => 'almanza@example.com',
             'password' => '$DASC_2024_HABANERO_SOFTWORKS',
         ]);
 
         User::create([
-            'username' => 'AdminHiguera',
+            'name' => 'AdminHiguera',
             'email' => 'higuera@example.com',
             'password' => '$DASC_2024_HABANERO_SOFTWORKS',
         ]);
