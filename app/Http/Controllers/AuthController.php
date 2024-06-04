@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function signUp (UserRequest $request): JsonResponse {
+    public function signUp(UserRequest $request): JsonResponse
+    {
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -28,7 +29,8 @@ class AuthController extends Controller
         ], 201);
     }
 
-    public function signIn (LoginRequest $request): JsonResponse {
+    public function signIn(LoginRequest $request): JsonResponse
+    {
         if (!Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
                 'status' => 'error',
