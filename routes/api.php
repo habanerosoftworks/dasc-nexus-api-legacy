@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AcademicPeriodController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChargeController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DayController;
@@ -31,4 +32,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('days', DayController::class);
     Route::apiResource('groups', GroupController::class);
     Route::apiResource('courses', CourseController::class);
+    Route::apiResource('charges', ChargeController::class);
 });
