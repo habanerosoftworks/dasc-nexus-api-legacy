@@ -8,6 +8,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DayController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MajorController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SessionDascController;
 use App\Http\Controllers\StudyPlanController;
 use App\Http\Controllers\TeacherController;
@@ -33,4 +34,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('groups', GroupController::class);
     Route::apiResource('courses', CourseController::class);
     Route::apiResource('charges', ChargeController::class);
+    Route::apiResource('schedules', ScheduleController::class);
 });
