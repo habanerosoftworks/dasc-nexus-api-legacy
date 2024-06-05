@@ -11,6 +11,7 @@ use App\Http\Controllers\MajorController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\SessionDascController;
 use App\Http\Controllers\StudyPlanController;
+use App\Http\Controllers\TeacherAttendanceController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -35,4 +36,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('courses', CourseController::class);
     Route::apiResource('charges', ChargeController::class);
     Route::apiResource('schedules', ScheduleController::class);
+    Route::apiResource('teacher-attendances', TeacherAttendanceController::class);
 });
