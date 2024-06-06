@@ -18,7 +18,7 @@ class TeacherSeeder extends Seeder
             'email' => 'almanza@teacher.com',
             'phone' => '1234567890',
             'address' => 'Calle 123',
-            'user_id' => 1,
+            'user_id' => 11,
         ]);
 
         Teacher::create([
@@ -29,7 +29,7 @@ class TeacherSeeder extends Seeder
             'email' => 'higuera@teacher.com',
             'phone' => '1234567891',
             'address' => 'Calle 123',
-            'user_id' => 2,
+            'user_id' => 12,
         ]);
     }
 }
