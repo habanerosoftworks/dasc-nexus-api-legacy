@@ -13,13 +13,15 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'AdminAlmanza',
             'email' => 'almanza@example.com',
-            'password' => '$DASC_2024_HABANERO_SOFTWORKS',
+            // 'password' => '$DASC_2024_HABANERO_SOFTWORKS',
+            'password' => 'Almanza123'
         ]);
 
         User::create([
             'name' => 'AdminHiguera',
             'email' => 'higuera@example.com',
-            'password' => '$DASC_2024_HABANERO_SOFTWORKS',
+            // 'password' => '$DASC_2024_HABANERO_SOFTWORKS',
+            'password' => 'Higuera123'
         ]);
     }
 }
