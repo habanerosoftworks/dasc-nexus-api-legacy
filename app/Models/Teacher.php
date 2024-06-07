@@ -13,6 +13,13 @@ class Teacher extends Model
 
     protected $guarded = [];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'original_id',
+        'was_deleted',
+    ];
+
     public function charges()
     {
         return $this->hasMany(Charge::class);

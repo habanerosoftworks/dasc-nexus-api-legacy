@@ -41,6 +41,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         return response()->json([
             'user' => $user,
+            'teacher' => $user->teacher,
             'status' => 'success',
             'message' => 'User signed in successfully',
             'token' => $user->createToken('API TOKEN')->plainTextToken,
