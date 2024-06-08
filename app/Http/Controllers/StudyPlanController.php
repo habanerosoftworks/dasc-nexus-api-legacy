@@ -12,7 +12,9 @@ class StudyPlanController extends Controller
     public function index(): JsonResponse
     {
         $studyPlans = StudyPlan::all();
-        return response()->json($studyPlans);
+        return response()->json([
+            'studyPlans' => $studyPlans
+        ], 200);
     }
 
     public function create()

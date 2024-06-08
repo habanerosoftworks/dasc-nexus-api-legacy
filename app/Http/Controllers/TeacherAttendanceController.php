@@ -12,7 +12,9 @@ class TeacherAttendanceController extends Controller
     public function index(): JsonResponse
     {
         $teacherAttendances = TeacherAttendance::all();
-        return response()->json($teacherAttendances);
+        return response()->json([
+            'teacherAttendances' => $teacherAttendances
+        ], 200);
     }
 
     public function create()

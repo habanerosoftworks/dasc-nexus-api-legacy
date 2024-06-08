@@ -12,7 +12,9 @@ class AcademicPeriodController extends Controller
     public function index(): JsonResponse
     {
         $academicPeriods = AcademicPeriod::all();
-        return response()->json($academicPeriods);
+        return response()->json([
+            'academicPeriods' => $academicPeriods
+        ], 200);
     }
 
     public function create()

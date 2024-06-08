@@ -12,7 +12,9 @@ class GroupController extends Controller
     public function index(): JsonResponse
     {
         $groups = Group::all();
-        return response()->json($groups);
+        return response()->json([
+            'groups' => $groups
+        ], 200);
     }
 
     public function create()

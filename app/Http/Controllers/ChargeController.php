@@ -12,7 +12,9 @@ class ChargeController extends Controller
     public function index(): JsonResponse
     {
         $charges = Charge::all();
-        return response()->json($charges);
+        return response()->json([
+            'charges' => $charges
+        ], 200);
     }
 
     public function create()

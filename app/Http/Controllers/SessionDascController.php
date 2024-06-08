@@ -12,7 +12,9 @@ class SessionDascController extends Controller
     public function index(): JsonResponse
     {
         $sessionsDasc = SessionDasc::all();
-        return response()->json($sessionsDasc);
+        return response()->json([
+            'sessionsDasc' => $sessionsDasc
+        ], 200);
     }
 
     public function create()

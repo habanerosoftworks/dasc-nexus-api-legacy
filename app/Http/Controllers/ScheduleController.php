@@ -12,7 +12,9 @@ class ScheduleController extends Controller
     public function index(): JsonResponse
     {
         $schedules = Schedule::all();
-        return response()->json($schedules);
+        return response()->json([
+            'schedules' => $schedules
+        ], 200);
     }
 
     public function create()

@@ -12,7 +12,9 @@ class CourseController extends Controller
     public function index(): JsonResponse
     {
         $courses = Course::all();
-        return response()->json($courses);
+        return response()->json([
+            'courses' => $courses
+        ], 200);
     }
 
     public function create()

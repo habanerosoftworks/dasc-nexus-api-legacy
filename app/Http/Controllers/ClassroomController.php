@@ -12,7 +12,9 @@ class ClassroomController extends Controller
     public function index(): JsonResponse
     {
         $classrooms = Classroom::all();
-        return response()->json($classrooms, 200);
+        return response()->json([
+            'classrooms' => $classrooms
+        ], 200);
     }
 
     public function create()

@@ -12,7 +12,9 @@ class TeacherController extends Controller
     public function index(): JsonResponse
     {
         $teachers = Teacher::all();
-        return response()->json($teachers, 200);
+        return response()->json([
+            'teachers' => $teachers
+        ], 200);
     }
 
     public function create()

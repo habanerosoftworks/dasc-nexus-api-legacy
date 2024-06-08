@@ -12,7 +12,9 @@ class MajorController extends Controller
     public function index(): JsonResponse
     {
         $majors = Major::all();
-        return response()->json($majors, 200);
+        return response()->json([
+            'majors' => $majors
+        ], 200);
     }
 
     public function create()

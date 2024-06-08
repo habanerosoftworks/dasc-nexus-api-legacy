@@ -12,7 +12,9 @@ class DayController extends Controller
     public function index(): JsonResponse
     {
         $days = Day::all();
-        return response()->json($days);
+        return response()->json([
+            'days' => $days
+        ], 200);
     }
 
     public function create()
