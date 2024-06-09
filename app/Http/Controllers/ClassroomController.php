@@ -3,17 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ClassroomRequest;
+use App\Models\Schedule;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Models\Classroom;
 
 class ClassroomController extends Controller
 {
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
+        $startTime = $request->query('start_time');
+        $endTime = $request->query('end_time');
+
         $classrooms = Classroom::all();
+
+        $classroomsWithAvailability = $classrooms->map(function($classroom) use ($startTime, $endTime) {
+            if (is_null($startTime) || is_null($endTime)) {
+                return [
+                    'classroom' => $classroom,
+                    'is_available' => null
+                ];
+            }
+            return [
+                'classroom' => $classroom,
+                'is_available' => $classroom->isAvailable($startTime, $endTime)
+            ];
+        });
+
         return response()->json([
-            'classrooms' => $classrooms
+            'classrooms' => $classroomsWithAvailability
         ], 200);
     }
 

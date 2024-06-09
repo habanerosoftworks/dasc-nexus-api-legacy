@@ -8,6 +8,7 @@ use App\Models\Schedule;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class CourseSeeder extends Seeder
 {
@@ -16,35 +17,55 @@ class CourseSeeder extends Seeder
      */
     public function run(): void
     {
+        function generateRandomTime($durationInMinutes)
+        {
+            $startHour = rand(7, 18);
+            $startMinute = rand(0, 59);
+
+            $startTime = Carbon::createFromTime($startHour, $startMinute);
+
+            $endTime = $startTime->copy()->addMinutes($durationInMinutes);
+
+            return [
+                'start_time' => $startTime->format('H:i:s'),
+                'end_time' => $endTime->format('H:i:s'),
+            ];
+        }
+
         for ($i = 1; $i <= 20; $i++) {
             Course::factory()
-                ->has(Charge::factory()
-                    ->count(5)
-                    ->state(function (array $attributes, Course $course) {
-                        return [
-                            'course_id' => $course->id,
-                            'teacher_id' => rand(1, 10),
-                            'study_plan_id' => rand(1, 10),
-                            'academic_period_id' => rand(1, 10),
-                            'group_id' => rand(1, 10),
-                        ];
-                    })
+                ->has(
+                    Charge::factory()
+                        ->count(5)
+                        ->state(function (array $attributes, Course $course) {
+                            return [
+                                'course_id' => $course->id,
+                                'teacher_id' => rand(1, 10),
+                                'study_plan_id' => rand(1, 10),
+                                'academic_period_id' => rand(1, 10),
+                                'group_id' => rand(1, 10),
+                            ];
+                        })
                 )
-                ->has(Schedule::factory()
-                    ->count(5)
-                    ->state(function (array $attributes, Course $course) {
-                        return [
-                            'course_id' => $course->id,
-                            'teacher_id' => rand(1, 10),
-                            'group_id' => rand(1, 10),
-                            'study_plan_id' => rand(1, 10),
-                            'academic_period_id' => rand(1, 10),
-                            'session_dasc_id' => rand(1, 10),
-                            'classroom_id' => rand(1, 10),
-                            'day_id' => rand(1, 10),
-                            'block_id' => rand(1, 10),
-                        ];
-                    })
+                ->has(
+                    Schedule::factory()
+                        ->count(5)
+                        ->state(function (array $attributes, Course $course) {
+                            $times = generateRandomTime(120);
+                            return [
+                                'course_id' => $course->id,
+                                'teacher_id' => rand(1, 10),
+                                'group_id' => rand(1, 10),
+                                'study_plan_id' => rand(1, 10),
+                                'academic_period_id' => rand(1, 10),
+                                'session_dasc_id' => rand(1, 10),
+                                'classroom_id' => rand(1, 10),
+                                'day_id' => rand(1, 10),
+                                'block_id' => rand(1, 10),
+                                'start_time' => $times['start_time'],
+                                'end_time' => $times['end_time'],
+                            ];
+                        })
                 )
                 ->create();
             DB::table('course_study_plan')
@@ -63,4 +84,7 @@ class CourseSeeder extends Seeder
                 ]);
         }
     }
+
+
+
 }
