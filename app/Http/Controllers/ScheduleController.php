@@ -6,6 +6,8 @@ use App\Http\Requests\ScheduleRequest;
 use Illuminate\Http\Request;
 use App\Models\Schedule;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class ScheduleController extends Controller
 {
@@ -51,5 +53,15 @@ class ScheduleController extends Controller
         $schedule = Schedule::findOrFail($id);
         $schedule->delete();
         return response()->json(null, 204);
+    }
+
+    public function getScheduleByUser(): JsonResponse
+    {
+        $user = User::where('id', auth()->id())->first();
+        $schedules = $user->teacher->schedules;
+        $schedules->load('classrom', 'course', 'group');
+        return response()->json([
+            'schedules' => $schedules
+        ], 200);
     }
 }

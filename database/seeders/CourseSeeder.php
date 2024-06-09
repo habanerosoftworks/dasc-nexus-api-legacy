@@ -54,7 +54,7 @@ class CourseSeeder extends Seeder
                             $times = generateRandomTime(120);
                             return [
                                 'course_id' => $course->id,
-                                'teacher_id' => rand(1, 10),
+                                'teacher_id' => rand(1, 12),
                                 'group_id' => rand(1, 10),
                                 'study_plan_id' => rand(1, 10),
                                 'academic_period_id' => rand(1, 10),

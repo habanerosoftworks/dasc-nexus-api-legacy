@@ -37,4 +37,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('charges', ChargeController::class);
     Route::apiResource('schedules', ScheduleController::class);
     Route::apiResource('teacher-attendances', TeacherAttendanceController::class);
+
+    Route::get('/schedules-by-user', [ScheduleController::class, 'getScheduleByUser']);
 });
