@@ -37,7 +37,7 @@ class Schedule extends Model
         return $this->belongsTo(SessionDasc::class);
     }
 
-    public function classrom(): BelongsTo
+    public function classroom(): BelongsTo
     {
         return $this->belongsTo(Classroom::class);
     }

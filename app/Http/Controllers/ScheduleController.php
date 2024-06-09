@@ -59,7 +59,7 @@ class ScheduleController extends Controller
     {
         $user = User::where('id', auth()->id())->first();
         $schedules = $user->teacher->schedules;
-        $schedules->load('classrom', 'course', 'group');
+        $schedules->load('classroom', 'course', 'group');
         return response()->json([
             'schedules' => $schedules
         ], 200);
