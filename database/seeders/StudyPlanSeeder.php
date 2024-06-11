@@ -13,8 +13,15 @@ class StudyPlanSeeder extends Seeder
      */
     public function run(): void
     {
-        StudyPlan::factory()
-            ->count(10)
-            ->create();
+        $jsonFilePath = file_get_contents('database/seeders/jsons/Plan.json');
+        $plans = json_decode($jsonFilePath, true);
+        foreach ($plans as $plan) {
+            StudyPlan::create([
+                'start' => $plan['year'],
+                'major_id' => $plan['degree_id'],
+                'end' => $plan['year'] + 4,
+                // 'description' => $plan['description']
+            ]);
+        }
     }
 }

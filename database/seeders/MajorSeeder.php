@@ -13,8 +13,12 @@ class MajorSeeder extends Seeder
      */
     public function run(): void
     {
-        Major::factory()
-            ->count(10)
-            ->create();
+        $jsonFilePath = file_get_contents('database/seeders/jsons/Major.json');
+        $degrees = json_decode($jsonFilePath, true);
+        foreach ($degrees as $degree) {
+            Major::create([
+                'name' => $degree['name'],
+            ]);
+        }
     }
 }

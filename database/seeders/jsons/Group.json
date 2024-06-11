@@ -1,0 +1,442 @@
+[
+    {
+        "name": "G91",
+        "shift": "V",
+        "semester": "2",
+        "degree_id": "7"
+    },
+    {
+        "name": "G44",
+        "shift": "V",
+        "semester": "4",
+        "degree_id": "1"
+    },
+    {
+        "name": "G43",
+        "shift": "M",
+        "semester": "4",
+        "degree_id": "1"
+    },
+    {
+        "name": "G90",
+        "shift": "V",
+        "semester": "1",
+        "degree_id": "7"
+    },
+    {
+        "name": "G42",
+        "shift": "V",
+        "semester": "3",
+        "degree_id": "1"
+    },
+    {
+        "name": "G37",
+        "shift": "M",
+        "semester": "1",
+        "degree_id": "1"
+    },
+    {
+        "name": "G38",
+        "shift": "V",
+        "semester": "1",
+        "degree_id": "1"
+    },
+    {
+        "name": "G41",
+        "shift": "M",
+        "semester": "3",
+        "degree_id": "1"
+    },
+    {
+        "name": "G39",
+        "shift": "M",
+        "semester": "2",
+        "degree_id": "1"
+    },
+    {
+        "name": "G40",
+        "shift": "V",
+        "semester": "2",
+        "degree_id": "1"
+    },
+    {
+        "name": "G36",
+        "shift": "V",
+        "semester": "9",
+        "degree_id": "2"
+    },
+    {
+        "name": "G35",
+        "shift": "M",
+        "semester": "9",
+        "degree_id": "2"
+    },
+    {
+        "name": "G34",
+        "shift": "V",
+        "semester": "9",
+        "degree_id": "5"
+    },
+    {
+        "name": "G33",
+        "shift": "M",
+        "semester": "9",
+        "degree_id": "5"
+    },
+    {
+        "name": "G32",
+        "shift": "V",
+        "semester": "8",
+        "degree_id": "2"
+    },
+    {
+        "name": "G31",
+        "shift": "M",
+        "semester": "8",
+        "degree_id": "2"
+    },
+    {
+        "name": "G30",
+        "shift": "V",
+        "semester": "8",
+        "degree_id": "5"
+    },
+    {
+        "name": "G29",
+        "shift": "M",
+        "semester": "8",
+        "degree_id": "5"
+    },
+    {
+        "name": "G56",
+        "shift": "M",
+        "semester": "4",
+        "degree_id": "4"
+    },
+    {
+        "name": "G57",
+        "shift": "M",
+        "semester": "8",
+        "degree_id": "3"
+    },
+    {
+        "name": "G26",
+        "shift": "V",
+        "semester": "7",
+        "degree_id": "3"
+    },
+    {
+        "name": "G25",
+        "shift": "M",
+        "semester": "7",
+        "degree_id": "3"
+    },
+    {
+        "name": "G24",
+        "shift": "V",
+        "semester": "6",
+        "degree_id": "3"
+    },
+    {
+        "name": "G23",
+        "shift": "M",
+        "semester": "6",
+        "degree_id": "3"
+    },
+    {
+        "name": "G22",
+        "shift": "V",
+        "semester": "6",
+        "degree_id": "5"
+    },
+    {
+        "name": "G21",
+        "shift": "M",
+        "semester": "6",
+        "degree_id": "5"
+    },
+    {
+        "name": "G20",
+        "shift": "V",
+        "semester": "5",
+        "degree_id": "3"
+    },
+    {
+        "name": "G19",
+        "shift": "M",
+        "semester": "5",
+        "degree_id": "3"
+    },
+    {
+        "name": "G18",
+        "shift": "V",
+        "semester": "5",
+        "degree_id": "5"
+    },
+    {
+        "name": "G17",
+        "shift": "M",
+        "semester": "5",
+        "degree_id": "5"
+    },
+    {
+        "name": "G16",
+        "shift": "V",
+        "semester": "4",
+        "degree_id": "3"
+    },
+    {
+        "name": "G15",
+        "shift": "M",
+        "semester": "4",
+        "degree_id": "3"
+    },
+    {
+        "name": "G14",
+        "shift": "V",
+        "semester": "4",
+        "degree_id": "5"
+    },
+    {
+        "name": "G13",
+        "shift": "M",
+        "semester": "4",
+        "degree_id": "5"
+    },
+    {
+        "name": "G12",
+        "shift": "V",
+        "semester": "3",
+        "degree_id": "3"
+    },
+    {
+        "name": "G11",
+        "shift": "M",
+        "semester": "3",
+        "degree_id": "3"
+    },
+    {
+        "name": "G09",
+        "shift": "M",
+        "semester": "3",
+        "degree_id": "5"
+    },
+    {
+        "name": "G07",
+        "shift": "M",
+        "semester": "2",
+        "degree_id": "3"
+    },
+    {
+        "name": "G06",
+        "shift": "V",
+        "semester": "2",
+        "degree_id": "5"
+    },
+    {
+        "name": "G05",
+        "shift": "M",
+        "semester": "2",
+        "degree_id": "5"
+    },
+    {
+        "name": "G08",
+        "shift": "V",
+        "semester": "2",
+        "degree_id": "3"
+    },
+    {
+        "name": "G01",
+        "shift": "M",
+        "semester": "1",
+        "degree_id": "5"
+    },
+    {
+        "name": "G02",
+        "shift": "V",
+        "semester": "1",
+        "degree_id": "5"
+    },
+    {
+        "name": "G03",
+        "shift": "M",
+        "semester": "1",
+        "degree_id": "3"
+    },
+    {
+        "name": "G04",
+        "shift": "V",
+        "semester": "1",
+        "degree_id": "3"
+    },
+    {
+        "name": "G10",
+        "shift": "V",
+        "semester": "3",
+        "degree_id": "5"
+    },
+    {
+        "name": "G45",
+        "shift": "M",
+        "semester": "5",
+        "degree_id": "1"
+    },
+    {
+        "name": "G46",
+        "shift": "V",
+        "semester": "5",
+        "degree_id": "1"
+    },
+    {
+        "name": "G99",
+        "shift": "M",
+        "semester": "1",
+        "degree_id": "4"
+    },
+    {
+        "name": "G92",
+        "shift": "V",
+        "semester": "3",
+        "degree_id": "7"
+    },
+    {
+        "name": "G47",
+        "shift": "M",
+        "semester": "6",
+        "degree_id": "1"
+    },
+    {
+        "name": "G48",
+        "shift": "V",
+        "semester": "6",
+        "degree_id": "1"
+    },
+    {
+        "name": "G93",
+        "shift": "V",
+        "semester": "4",
+        "degree_id": "7"
+    },
+    {
+        "name": "G71",
+        "shift": "M",
+        "semester": "2",
+        "degree_id": "4"
+    },
+    {
+        "name": "G49",
+        "shift": "M",
+        "semester": "7",
+        "degree_id": "1"
+    },
+    {
+        "name": "G50",
+        "shift": "V",
+        "semester": "7",
+        "degree_id": "1"
+    },
+    {
+        "name": "G72",
+        "shift": "M",
+        "semester": "3",
+        "degree_id": "4"
+    },
+    {
+        "name": "G51",
+        "shift": "M",
+        "semester": "8",
+        "degree_id": "1"
+    },
+    {
+        "name": "G52",
+        "shift": "V",
+        "semester": "8",
+        "degree_id": "1"
+    },
+    {
+        "name": "G53",
+        "shift": "V",
+        "semester": "4",
+        "degree_id": "4"
+    },
+    {
+        "name": "G73",
+        "shift": "M",
+        "semester": "5",
+        "degree_id": "4"
+    },
+    {
+        "name": "G74",
+        "shift": "V",
+        "semester": "5",
+        "degree_id": "4"
+    },
+    {
+        "name": "G54",
+        "shift": "M",
+        "semester": "9",
+        "degree_id": "1"
+    },
+    {
+        "name": "G55",
+        "shift": "V",
+        "semester": "9",
+        "degree_id": "1"
+    },
+    {
+        "name": "G75",
+        "shift": "V",
+        "semester": "6",
+        "degree_id": "4"
+    },
+    {
+        "name": "G76",
+        "shift": "M",
+        "semester": "7",
+        "degree_id": "4"
+    },
+    {
+        "name": "G77",
+        "shift": "V",
+        "semester": "7",
+        "degree_id": "4"
+    },
+    {
+        "name": "G58",
+        "shift": "V",
+        "semester": "8",
+        "degree_id": "3"
+    },
+    {
+        "name": "G100",
+        "shift": "V",
+        "semester": "1",
+        "degree_id": "6"
+    },
+    {
+        "name": "G59",
+        "shift": "M",
+        "semester": "9",
+        "degree_id": "3"
+    },
+    {
+        "name": "G60",
+        "shift": "V",
+        "semester": "9",
+        "degree_id": "3"
+    },
+    {
+        "name": "G98",
+        "shift": "M",
+        "semester": "6",
+        "degree_id": "4"
+    },
+    {
+        "name": "G101",
+        "shift": "V",
+        "semester": "2",
+        "degree_id": "6"
+    }
+]
+
+

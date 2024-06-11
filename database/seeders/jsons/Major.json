@@ -1,0 +1,9 @@
+[
+    {"name":"Ingeniería en Desarrollo de Software","short_name":"IDS"},
+    {"name":"Ingeniería en Tecnología Computacional","short_name":"ITC"},
+    {"name":"Ingeniería en Tecnología Computacional","short_name":"ITC2"},
+    {"name":"Licenciatura en Administración de Tecnologías de la información","short_name":"LAT"},
+    {"name":"Licenciatura en Computación","short_name":"LIC"},
+    {"name":"Licenciatura en Tecnologías de la Información","short_name":"LITI"},
+    {"name":"Maestría en Tecnologías de la Información","short_name":"MTI"}
+]
