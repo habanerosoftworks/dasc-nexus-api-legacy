@@ -14,14 +14,16 @@ class UserSeeder extends Seeder
             'name' => 'AdminAlmanza',
             'email' => 'almanza@example.com',
             // 'password' => '$DASC_2024_HABANERO_SOFTWORKS',
-            'password' => 'Almanza123'
+            'password' => 'Almanza123',
+            'role' => 'admin'
         ]);
 
         User::create([
             'name' => 'AdminHiguera',
             'email' => 'higuera@example.com',
             // 'password' => '$DASC_2024_HABANERO_SOFTWORKS',
-            'password' => 'Higuera123'
+            'password' => 'Higuera123',
+            'role' => 'admin'
         ]);
     }
 }

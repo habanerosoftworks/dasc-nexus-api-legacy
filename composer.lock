@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c133b312fe180afc0f2b635022ad80ac",
+    "content-hash": "906896918546187f11cef83caa5c9745",
     "packages": [
         {
             "name": "brick/math",
@@ -2473,6 +2473,53 @@
             "time": "2023-11-12T21:59:55+00:00"
         },
         {
+            "name": "psfd-dev/exponent-server-sdk-php",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/psfd-dev/exponent-server-sdk-php.git",
+                "reference": "86f9f875cf12591f881c906a16067594a5ce1245"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/psfd-dev/exponent-server-sdk-php/zipball/86f9f875cf12591f881c906a16067594a5ce1245",
+                "reference": "86f9f875cf12591f881c906a16067594a5ce1245",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ExponentPhpSDK\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aly Suleiman",
+                    "email": "alymosul@gmail.com"
+                }
+            ],
+            "description": "Server-side library for working with Expo push notifications using PHP",
+            "keywords": [
+                "expo",
+                "exponent",
+                "notifications",
+                "push"
+            ],
+            "support": {
+                "source": "https://github.com/psfd-dev/exponent-server-sdk-php/tree/1.2.1"
+            },
+            "time": "2021-11-08T08:23:34+00:00"
+        },
+        {
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
@@ -3187,6 +3234,58 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "sbkl/laravel-expo-push-notifications",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sbkl/laravel-expo-push-notifications.git",
+                "reference": "04b13ab5712a9cc5214a93d6ab37b388cb9e22d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sbkl/laravel-expo-push-notifications/zipball/04b13ab5712a9cc5214a93d6ab37b388cb9e22d3",
+                "reference": "04b13ab5712a9cc5214a93d6ab37b388cb9e22d3",
+                "shasum": ""
+            },
+            "require-dev": {
+                "dms/phpunit-arraysubset-asserts": "^0.2.0",
+                "orchestra/testbench": "^5.3",
+                "phpunit/phpunit": "^9.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sbkl\\LaravelExpoPushNotifications\\ExpoServiceProvider"
+                    ],
+                    "aliases": {
+                        "Expo": "Sbkl\\LaravelExpoPushNotifications\\Facades\\Expo"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sbkl\\LaravelExpoPushNotifications\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastien Koziel",
+                    "email": "sebastien@sbkl.ltd"
+                }
+            ],
+            "description": "A Laravel wrapper around Alymosul/exponent-server-sdk-php",
+            "support": {
+                "issues": "https://github.com/sbkl/laravel-expo-push-notifications/issues",
+                "source": "https://github.com/sbkl/laravel-expo-push-notifications/tree/v1.8.0"
+            },
+            "time": "2020-08-27T01:37:53+00:00"
         },
         {
             "name": "symfony/clock",

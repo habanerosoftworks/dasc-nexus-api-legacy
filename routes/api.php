@@ -13,6 +13,7 @@ use App\Http\Controllers\SessionDascController;
 use App\Http\Controllers\StudyPlanController;
 use App\Http\Controllers\TeacherAttendanceController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,7 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/sign-up', [AuthController::class, 'signUp']);
 Route::post('/sign-in', [AuthController::class, 'signIn']);
+
 
 
 Route::middleware('auth:sanctum')->group(function () {
@@ -37,6 +39,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('charges', ChargeController::class);
     Route::apiResource('schedules', ScheduleController::class);
     Route::apiResource('teacher-attendances', TeacherAttendanceController::class);
+
+    Route::post('/store-token', [NotificationController::class, 'storeToken']);
+    Route::post('/send-notification', [NotificationController::class, 'sendNotification']);
 
     Route::get('/schedules-by-user', [ScheduleController::class, 'getScheduleByUser']);
 });
