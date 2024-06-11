@@ -74,7 +74,7 @@ class CourseSeeder extends Seeder
                                 'study_plan_id' => rand(1, 10),
                                 'academic_period_id' => rand(1, 10),
                                 'session_dasc_id' => rand(1, 10),
-                                'classroom_id' => rand(1, 10),
+                                'classroom_id' => rand(1, 7),
                                 'day_id' => rand(1, 10),
                                 'block_id' => rand(1, 10),
                                 'start_time' => $times['start_time'],
