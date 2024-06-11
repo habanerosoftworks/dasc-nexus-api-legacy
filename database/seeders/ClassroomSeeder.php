@@ -8,13 +8,26 @@ use Illuminate\Database\Seeder;
 
 class ClassroomSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        Classroom::factory()
-            ->count(7)
-            ->create();
+        $descriptions = [
+            'Python',
+            'JavaScript',
+            'Java',
+            'C++',
+            'Ruby',
+            'PHP',
+            'Swift',
+        ];
+
+        for ($i = 0; $i < count($descriptions); $i++) {
+            Classroom::factory()
+                ->state(function (array $attributes) use ($descriptions, $i) {
+                    return [
+                        'description' => $descriptions[$i],
+                    ];
+                })
+                ->create();
+        }
     }
 }

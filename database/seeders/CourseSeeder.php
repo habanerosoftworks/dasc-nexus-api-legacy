@@ -32,8 +32,23 @@ class CourseSeeder extends Seeder
             ];
         }
 
-        for ($i = 1; $i <= 20; $i++) {
+        $courseNames = [
+            'Español',
+            'Inglés',
+            'Matemáticas',
+            'Programación I',
+            'Programación II',
+            'Programación Avanzada',
+            'Sistemas Distribuidos',
+        ];
+
+        for ($i = 1; $i <= 7; $i++) {
             Course::factory()
+                ->state(function (array $attributes) use ($courseNames, $i) {
+                    return [
+                        'name' => $courseNames[$i % count($courseNames)],
+                    ];
+                })
                 ->has(
                     Charge::factory()
                         ->count(5)
@@ -84,7 +99,4 @@ class CourseSeeder extends Seeder
                 ]);
         }
     }
-
-
-
 }
